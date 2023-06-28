@@ -1,7 +1,6 @@
 Feature: Login Page Test
   Scenario: Login Valid Functionality Test
-    Given User enter url HRM
-    Given User enter url HRM
+    Given User enter url HADIR
     When User enter valid username
     And User enter valid password
     And User click button login

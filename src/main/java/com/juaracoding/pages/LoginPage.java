@@ -31,13 +31,9 @@ public class LoginPage {
     WebElement txtInvalidCredentials;
 
 
-    public void logout(){
-        btnLogout.click();
-    }
+    public void Btnlogout() { btnLogout.click();}
 
-    public void enterUsername(String username){
-        this.username.sendKeys(username);
-    }
+    public void enterUsername(String username) {this.username.sendKeys(username);}
 
     public void enterPassword(String password){
         this.password.sendKeys(password);

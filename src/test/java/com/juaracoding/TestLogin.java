@@ -22,7 +22,7 @@ public class TestLogin {
         extentTest = Hooks.extentTest;
     }
 
-    @Given("User enter url HRM")
+    @Given("User enter url HADIR")
     public void user_enter_url_hrm(){
         driver.get(Constants.URL);
         extentTest.log(LogStatus.PASS, "User enter url HRM");
@@ -57,7 +57,7 @@ public class TestLogin {
     public void user_enter_invalid_username(){
         Hooks.delay(Constants.DETIK);
         loginPage.BtnProfile();
-        loginPage.logout();
+        loginPage.Btnlogout();
         loginPage.enterUsername("qa.tester@hadir.con");
         extentTest.log(LogStatus.PASS,"User enter invalid username");
     }
