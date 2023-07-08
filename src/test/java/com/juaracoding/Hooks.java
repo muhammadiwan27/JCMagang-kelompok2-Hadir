@@ -23,14 +23,13 @@ public class Hooks {
     static ExtentReports reports = new ExtentReports("target/extent-report.html");
 
     @Before
-    public static void setUp(){
+    public static void setUp() {
         DriverSingleton.getInstance(Constants.CHROME);
         driver = DriverSingleton.getDriver();
         TestScenarios[] test = TestScenarios.values();
         extentTest = reports.startTest(test[Utils.testCount].getTestCaseName());
         Utils.testCount++;
     }
-
     @AfterStep
     public void getResultStatus(Scenario scenario) throws IOException {
         if (scenario.isFailed()) {
@@ -38,7 +37,6 @@ public class Hooks {
             extentTest.log(LogStatus.FAIL, scenario.getName() + "\n"
                     + extentTest.addScreenCapture(screeshotPath));
         }
-
     }
     @After
     public void endTestCase(){
